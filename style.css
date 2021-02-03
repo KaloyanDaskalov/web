@@ -1,0 +1,296 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+/* --- main styles --- */
+
+:root {
+  --purple: #68347b;
+  --black: #000000;
+  --white: #ffffff;
+  --radius: 0.25rem;
+  font-size: 0.6rem;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  min-height: 5rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* --- navigation --- */
+
+.header {
+  max-width: 90vw;
+  margin: auto;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  color: var(--purple);
+  font-size: 4rem;
+}
+
+.title p {
+  text-transform: uppercase;
+}
+
+.navigation {
+  display: none;
+  width: 100%;
+}
+
+.navigation a {
+  color: black;
+  display: block;
+  font-weight: 600;
+}
+
+.burger-menu {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.burger-menu::before {
+  content: "\f0c9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+/* --- need web cite --- */
+
+.website .info {
+  width: 70%;
+}
+
+.website .info h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.website .info button {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--black);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.website .fas {
+  font-size: 8rem;
+}
+
+/* --- our team --- */
+
+.section-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.section-title hr {
+  border: none;
+  border-bottom: 3px solid var(--black);
+  margin: 1rem auto 3rem;
+  width: 6rem;
+}
+
+.member {
+  flex: 0 0 48%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.member img {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px #cccccc;
+}
+
+.member .job {
+  margin-bottom: 2rem;
+}
+
+/* --- sign section --- */
+
+.sign {
+  background-color: var(--purple);
+  color: var(--white);
+  box-shadow: 0 0 5px 5px rgba(200, 200, 200, 1);
+}
+
+.sign-form {
+  width: 30rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-form input {
+  flex: 1 1 60%;
+  padding: 0.5rem;
+  border: 2px solid var(--black);
+}
+
+.sign-form button {
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--black);
+  background-color: var(--white);
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+/* --- testimonials --- */
+
+.testimonials .member .description {
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* --- footer --- */
+
+.footer {
+  background-color: #bbb;
+}
+
+.footer .wrapper {
+  min-height: 25rem;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.title-footer {
+  margin-right: auto;
+}
+
+.title-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer nav {
+  width: 100%;
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.footer .nav-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .nav-footer li {
+  flex: 0 0 45%;
+}
+
+.footer .nav-footer li a {
+  color: var(--black);
+}
+
+.contacts {
+  margin-right: auto;
+}
+
+.contacts p {
+  margin-bottom: 0.5rem;
+}
+
+.contacts .fas {
+  margin-right: 1rem;
+}
+/* --- media queries --- */
+
+@media screen and (min-width: 400px) {
+  :root {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .burger-menu {
+    display: none;
+  }
+
+  nav {
+    width: 45%;
+  }
+
+  .navigation {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .team .member {
+    flex: 0 0 32%;
+  }
+
+  .footer .wrapper {
+    flex-direction: row;
+    min-height: 20rem;
+  }
+
+  .title-footer,
+  .footer nav,
+  .footer .contacts {
+    flex: 0 0 30%;
+  }
+}
